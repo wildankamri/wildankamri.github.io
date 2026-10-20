@@ -1,0 +1,116 @@
+[
+  {
+    "id": "sales-performance-dashboard",
+    "title": "Sales Performance Dashboard",
+    "category": "dashboard",
+    "tools": ["Tableau"],
+    "status": "completed",
+    "summary": "Dashboard penjualan regional untuk memantau target vs realisasi bulanan.",
+    "problem": "Tim sales kesulitan memantau performa tiap region secara real-time karena data tersebar di beberapa spreadsheet.",
+    "process": "Menggabungkan data dari beberapa sumber, membuat kalkulasi target achievement, dan menyusun dashboard interaktif dengan filter region dan periode.",
+    "result": "Waktu pelaporan mingguan berkurang dari 2 hari menjadi kurang dari 1 jam.",
+    "thumbnail": "images/sales-performance-dashboard.png",
+    "links": {
+      "caseStudy": "projects/sales-performance-dashboard.html",
+      "liveDashboard": "https://public.tableau.com/app/profile/USERNAME/viz/PROJECT",
+      "repo": null
+    },
+    "date": "2026-06",
+    "featured": true
+  },
+  {
+    "id": "hr-attrition-analysis",
+    "title": "HR Attrition Analysis",
+    "category": "dashboard",
+    "tools": ["Power BI"],
+    "status": "in-progress",
+    "summary": "Analisis faktor yang memengaruhi tingkat resign karyawan.",
+    "problem": "",
+    "process": "",
+    "result": "",
+    "thumbnail": "images/hr-attrition-analysis.png",
+    "links": {
+      "caseStudy": null,
+      "liveDashboard": null,
+      "repo": "https://github.com/USERNAME/hr-attrition-analysis"
+    },
+    "date": "2026-09",
+    "featured": false
+  },
+  {
+    "id": "marketing-campaign-report",
+    "title": "Marketing Campaign Report",
+    "category": "dashboard",
+    "tools": ["Looker Studio"],
+    "status": "in-progress",
+    "summary": "Laporan performa kampanye marketing lintas kanal.",
+    "problem": "",
+    "process": "",
+    "result": "",
+    "thumbnail": "images/marketing-campaign-report.png",
+    "links": {
+      "caseStudy": null,
+      "liveDashboard": null,
+      "repo": null
+    },
+    "date": "2026-09",
+    "featured": false
+  },
+  {
+    "id": "budget-tracker-excel",
+    "title": "Budget Tracker",
+    "category": "dashboard",
+    "tools": ["Excel"],
+    "status": "in-progress",
+    "summary": "Tracker anggaran operasional dengan visualisasi otomatis.",
+    "problem": "",
+    "process": "",
+    "result": "",
+    "thumbnail": "images/budget-tracker-excel.png",
+    "links": {
+      "caseStudy": null,
+      "liveDashboard": null,
+      "repo": null
+    },
+    "date": "2026-09",
+    "featured": false
+  },
+  {
+    "id": "customer-churn-prediction",
+    "title": "Customer Churn Prediction",
+    "category": "machine-learning",
+    "tools": ["Python", "scikit-learn"],
+    "status": "in-progress",
+    "summary": "Model prediksi pelanggan yang berpotensi churn.",
+    "problem": "",
+    "process": "",
+    "result": "",
+    "thumbnail": "images/customer-churn-prediction.png",
+    "links": {
+      "caseStudy": null,
+      "liveDashboard": null,
+      "repo": "https://github.com/USERNAME/customer-churn-prediction"
+    },
+    "date": "2026-09",
+    "featured": false
+  },
+  {
+    "id": "ecommerce-review-scraper",
+    "title": "E-commerce Review Scraper & Cleaner",
+    "category": "data-cleaning",
+    "tools": ["Python", "BeautifulSoup", "Pandas"],
+    "status": "in-progress",
+    "summary": "Ekstraksi dan pembersihan data ulasan produk dari marketplace.",
+    "problem": "",
+    "process": "",
+    "result": "",
+    "thumbnail": "images/ecommerce-review-scraper.png",
+    "links": {
+      "caseStudy": null,
+      "liveDashboard": null,
+      "repo": "https://github.com/USERNAME/ecommerce-review-scraper"
+    },
+    "date": "2026-09",
+    "featured": false
+  }
+]

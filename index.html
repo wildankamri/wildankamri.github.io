@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio — Data Analyst &amp; Data Scientist</title>
+  <meta name="description" content="Portofolio proyek data analytics: dashboard, data cleaning, dan machine learning. Didokumentasikan dengan konteks masalah, proses, dan hasil.">
+
+  <!-- Google Fonts: IBM Plex family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================
+       Hero
+       ============================================ -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <p class="hero-role">Data Analyst, Data Scientist</p>
+      <h1 class="hero-headline">Teliti dalam proses, jelas dalam hasil.</h1>
+      <p class="hero-sub">
+        Portofolio ini berisi proyek dashboard, data cleaning, dan machine learning
+        — masing-masing didokumentasikan dengan konteks, proses, dan hasil yang terukur.
+      </p>
+      <div class="hero-cta">
+        <a href="#proyek" class="btn btn-primary" id="cta-projects">Lihat Proyek</a>
+        <a href="#kontak" class="btn btn-secondary" id="cta-contact">Hubungi Saya</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ============================================
+       Daftar Proyek
+       ============================================ -->
+  <section class="projects" id="proyek">
+    <div class="container">
+      <h2 class="section-title">Daftar Proyek</h2>
+
+      <nav class="project-filters" aria-label="Filter proyek">
+        <button class="filter-btn active" data-category="all" id="filter-all" aria-pressed="true">Semua</button>
+        <button class="filter-btn" data-category="dashboard" id="filter-dashboard" aria-pressed="false">Dashboard</button>
+        <button class="filter-btn" data-category="data-cleaning" id="filter-cleaning" aria-pressed="false">Data Cleaning</button>
+        <button class="filter-btn" data-category="machine-learning" id="filter-ml" aria-pressed="false">Machine Learning</button>
+      </nav>
+
+      <!-- Ledger header (hidden on mobile via CSS) -->
+      <div class="ledger-header" aria-hidden="true">
+        <span class="ledger-col-name">Proyek</span>
+        <span class="ledger-col-tools">Tools</span>
+        <span class="ledger-col-status">Status</span>
+        <span class="ledger-col-date">Tanggal</span>
+      </div>
+
+      <!-- Rows rendered by main.js -->
+      <div class="ledger-body" id="project-list"></div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Kontak
+       ============================================ -->
+  <footer class="kontak" id="kontak">
+    <div class="container">
+      <h2 class="section-title">Kontak</h2>
+      <p class="kontak-desc">
+        Terbuka untuk diskusi proyek analisis data, kesempatan kerja, atau kolaborasi.
+      </p>
+      <ul class="kontak-list">
+        <li class="kontak-item">
+          <span class="kontak-label">Email</span>
+          <a href="mailto:wildankamri@gmail.com" class="kontak-link">wildankamri@gmail.com</a>
+        </li>
+        <li class="kontak-item">
+          <span class="kontak-label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/wildan-khoirul-amri" target="_blank" rel="noopener noreferrer" class="kontak-link">linkedin.com/in/wildan-khoirul-amri</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
