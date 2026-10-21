@@ -1,116 +1,89 @@
 [
   {
-    "id": "sales-performance-dashboard",
-    "title": "Sales Performance Dashboard",
+    "id": "nyc-yellow-taxi",
+    "title": "NYC Yellow Taxi: Trip Analysis",
     "category": "dashboard",
     "tools": ["Tableau"],
     "status": "completed",
-    "summary": "Dashboard penjualan regional untuk memantau target vs realisasi bulanan.",
-    "problem": "Tim sales kesulitan memantau performa tiap region secara real-time karena data tersebar di beberapa spreadsheet.",
-    "process": "Menggabungkan data dari beberapa sumber, membuat kalkulasi target achievement, dan menyusun dashboard interaktif dengan filter region dan periode.",
-    "result": "Waktu pelaporan mingguan berkurang dari 2 hari menjadi kurang dari 1 jam.",
-    "thumbnail": "images/sales-performance-dashboard.png",
+    "summary": "Analisis pola perjalanan taksi kuning New York pada April 2022 dari sampel 1.000 transaksi.",
+    "problem": "Memahami kapan permintaan taksi memuncak, dari zona mana penumpang dijemput, dan bagaimana pola pembayarannya.",
+    "process": "Membangun dashboard interaktif di Tableau dari sampel 1.000 transaksi April 2022, dengan filter tanggal, periode waktu, metode pembayaran, jenis tarif, dan vendor.",
+    "result": "Permintaan memuncak di sore hari (puncak 82 perjalanan per jam di sekitar pukul 18.00). Pembayaran kartu kredit mendominasi (76,8%), dan zona penjemputan teratas adalah Upper East Side North, Midtown Center, dan JFK Airport.",
+    "thumbnail": "images/nyc-yellow-taxi.png",
     "links": {
-      "caseStudy": "projects/sales-performance-dashboard.html",
-      "liveDashboard": "https://public.tableau.com/app/profile/USERNAME/viz/PROJECT",
-      "repo": null
+      "caseStudy": null,
+      "liveDashboard": "https://public.tableau.com/app/profile/wildan.khoirul.amri/viz/porto_17909272814760/Dashboard1",
+      "repo": null,
+      "download": null,
+      "embed": "https://public.tableau.com/views/porto_17909272814760/Dashboard1?:showVizHome=no&:embed=true",
+      "embedSize": {
+        "width": 1400,
+        "height": 1000
+      }
     },
-    "date": "2026-06",
+    "insights": [
+      "Puncak perjalanan mencapai 82 per jam sekitar pukul 18.00.",
+      "Pembayaran kartu kredit mendominasi dengan 76,8% transaksi.",
+      "Zona penjemputan teratas: Upper East Side North, Midtown Center, dan JFK Airport."
+    ],
+    "date": "2026-10",
     "featured": true
   },
   {
-    "id": "hr-attrition-analysis",
-    "title": "HR Attrition Analysis",
-    "category": "dashboard",
-    "tools": ["Power BI"],
-    "status": "in-progress",
-    "summary": "Analisis faktor yang memengaruhi tingkat resign karyawan.",
-    "problem": "",
-    "process": "",
-    "result": "",
-    "thumbnail": "images/hr-attrition-analysis.png",
-    "links": {
-      "caseStudy": null,
-      "liveDashboard": null,
-      "repo": "https://github.com/USERNAME/hr-attrition-analysis"
-    },
-    "date": "2026-09",
-    "featured": false
-  },
-  {
-    "id": "marketing-campaign-report",
-    "title": "Marketing Campaign Report",
+    "id": "kimia-farma-sales",
+    "title": "Dashboard Kinerja Penjualan PT Kimia Farma",
     "category": "dashboard",
     "tools": ["Looker Studio"],
-    "status": "in-progress",
-    "summary": "Laporan performa kampanye marketing lintas kanal.",
-    "problem": "",
-    "process": "",
-    "result": "",
-    "thumbnail": "images/marketing-campaign-report.png",
+    "status": "completed",
+    "summary": "Dashboard kinerja penjualan Januari–Juni 2022: tren bulanan, performa per kota, segmen pelanggan, dan produk terlaris.",
+    "problem": "Memantau kinerja penjualan secara menyeluruh: tren pendapatan, kota dengan penjualan terkuat, segmen pelanggan, dan produk yang paling laku.",
+    "process": "Menyusun dashboard di Looker Studio dengan KPI utama (pendapatan, produk terjual, invoice, pelanggan aktif), tren bulanan, penjualan per kota, perbandingan segmen, produk terlaris, dan tabel detail produk per kota.",
+    "result": "Total pendapatan Rp49,26 juta dari 9.187 produk terjual. Jakarta menjadi kota dengan penjualan tertinggi (1.751), segmen Apotek menyumbang 63,6%, dan Ampicillin menjadi produk terlaris (1.337).",
+    "thumbnail": "images/kimia-farma-sales.png",
     "links": {
       "caseStudy": null,
-      "liveDashboard": null,
-      "repo": null
+      "liveDashboard": "https://datastudio.google.com/reporting/2995e9b5-17c7-406d-a846-38ad2a25a73d/page/q4n9F",
+      "repo": null,
+      "download": null,
+      "embed": "https://lookerstudio.google.com/embed/reporting/2995e9b5-17c7-406d-a846-38ad2a25a73d/page/q4n9F",
+      "embedSize": null
     },
-    "date": "2026-09",
+    "insights": [
+      "Total pendapatan mencapai Rp49,26 juta dari 9.187 produk terjual.",
+      "Jakarta menjadi kota dengan penjualan tertinggi, sebanyak 1.751 produk.",
+      "Segmen Apotek menyumbang 63,6% penjualan, sementara Ampicillin terjual 1.337 unit."
+    ],
+    "date": "2026-10",
     "featured": false
   },
-  {
-    "id": "budget-tracker-excel",
-    "title": "Budget Tracker",
+    {
+    "id": "sejahtera-bersama-sales",
+    "title": "PT. Sejahtera Bersama Sales Dashboard",
     "category": "dashboard",
     "tools": ["Excel"],
-    "status": "in-progress",
-    "summary": "Tracker anggaran operasional dengan visualisasi otomatis.",
-    "problem": "",
-    "process": "",
-    "result": "",
-    "thumbnail": "images/budget-tracker-excel.png",
+    "status": "completed",
+    "summary": "Dashboard Excel interaktif untuk performa penjualan Januari 2020–Desember 2021, lengkap dengan key insights.",
+    "problem": "Mengevaluasi performa penjualan dua tahun dan mencari penyebab perubahan revenue antar tahun.",
+    "process": "Membangun dashboard Excel dengan slicer Tahun dan Kategori, KPI utama, tren revenue bulanan 2020 vs 2021, analisis pelanggan repeat, serta ranking kategori, produk, dan state.",
+    "result": "Revenue 2021 turun 7,8% (dari $913K ke $842K), terutama karena kategori Robots (turun 15%). Robots dan Drones menyumbang 70% revenue, dan pelanggan repeat menghasilkan 80% revenue meski hanya 59% dari pelanggan aktif.",
+    "thumbnail": "images/sejahtera-bersama-overview.png",
     "links": {
       "caseStudy": null,
-      "liveDashboard": null,
-      "repo": null
+      "liveDashboard": "https://1drv.ms/x/c/8C8890B7A4B0A953/IQCua5AoHDpGSrsSoYZ3rXziAaL84Frs7mQ1eu0ZNugVztA?e=Pn2eeI",
+      "repo": null,
+      "download": "files/PT-Sejahtera-Bersama-Sales-Dashboard.xlsx",
+      "downloadLabel": "Unduh file Excel (.xlsx)",
+      "downloadNote": "Tampilan di atas adalah versi web: slicer Tahun dan Kategori tidak berfungsi di Excel untuk web. Unduh file dan buka di Excel desktop agar slicer berjalan.",
+      "embed": "https://1drv.ms/x/c/8C8890B7A4B0A953/IQSua5AoHDpGSrsSoYZ3rXziATAWDIth94BfUKN9fEhiFTo?em=2&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True",
+      "embedSize": { "width": 1370, "height": 850 }
     },
-    "date": "2026-09",
-    "featured": false
-  },
-  {
-    "id": "customer-churn-prediction",
-    "title": "Customer Churn Prediction",
-    "category": "machine-learning",
-    "tools": ["Python", "scikit-learn"],
-    "status": "in-progress",
-    "summary": "Model prediksi pelanggan yang berpotensi churn.",
-    "problem": "",
-    "process": "",
-    "result": "",
-    "thumbnail": "images/customer-churn-prediction.png",
-    "links": {
-      "caseStudy": null,
-      "liveDashboard": null,
-      "repo": "https://github.com/USERNAME/customer-churn-prediction"
-    },
-    "date": "2026-09",
-    "featured": false
-  },
-  {
-    "id": "ecommerce-review-scraper",
-    "title": "E-commerce Review Scraper & Cleaner",
-    "category": "data-cleaning",
-    "tools": ["Python", "BeautifulSoup", "Pandas"],
-    "status": "in-progress",
-    "summary": "Ekstraksi dan pembersihan data ulasan produk dari marketplace.",
-    "problem": "",
-    "process": "",
-    "result": "",
-    "thumbnail": "images/ecommerce-review-scraper.png",
-    "links": {
-      "caseStudy": null,
-      "liveDashboard": null,
-      "repo": "https://github.com/USERNAME/ecommerce-review-scraper"
-    },
-    "date": "2026-09",
+    "insights": [
+      "Revenue 2021 turun 7,8% (dari $913K ke $842K), dipicu kategori Robots yang turun 15%.",
+      "Robots (42%) dan Drones (27%) menyumbang 70% dari total revenue.",
+      "California dan Texas menyumbang 25% revenue.",
+      "Pelanggan repeat menghasilkan 80% revenue, padahal hanya 59% dari pelanggan aktif."
+    ],
+    "date": "2026-10",
     "featured": false
   }
 ]

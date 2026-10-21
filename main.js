@@ -38,9 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function createRow(project) {
-    const titleHTML = project.links.caseStudy
-      ? `<a href="${escapeHTML(project.links.caseStudy)}" class="project-link">${escapeHTML(project.title)}</a>`
-      : `<span>${escapeHTML(project.title)}</span>`;
+    const titleHTML = `<a href="project.html?id=${encodeURIComponent(project.id)}" class="project-link">${escapeHTML(project.title)}</a>`;
 
     const featuredHTML = project.featured
       ? '<span class="featured-label">Unggulan</span>'
