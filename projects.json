@@ -85,5 +85,38 @@
     ],
     "date": "2026-10",
     "featured": false
+  },
+    {
+    "id": "credit-risk-prediction",
+    "title": "Credit Risk Prediction: Lending Club",
+    "category": "machine-learning",
+    "tools": ["Python", "scikit-learn", "Pandas", "Jupyter"],
+    "status": "completed",
+    "summary": "Model klasifikasi untuk mengidentifikasi risiko gagal bayar pinjaman dari data Lending Club periode 2007–2014.",
+    "problem": "Mengidentifikasi pinjaman dengan risiko gagal bayar lebih tinggi dari data historis, dengan pembagian data yang menjaga evaluasi tetap realistis.",
+    "process": "Mengikuti pendekatan CRISP-DM pada 230.795 pinjaman berlabel (bad rate 19,09%) dengan 27 fitur. Data dibagi secara kronologis (train 168.010, validation 30.680, test 32.105) untuk mengurangi kebocoran informasi antarperiode. Dummy Classifier, Logistic Regression, dan Random Forest dibandingkan, lalu threshold dipilih di validation set dengan batas recall minimum 65%.",
+    "result": "Random Forest terpilih. Pada data uji: ROC-AUC 0,6894, recall 65,63%, precision 30,83%, dan average precision 0,3488. Nilai ROC-AUC menunjukkan kemampuan pemisahan yang moderat, dan keterbatasan model dijelaskan terbuka di dokumentasi.",
+    "thumbnail": "images/credit-risk-prediction.png",
+    "links": {
+      "caseStudy": null,
+      "liveDashboard": "https://1drv.ms/p/c/8C8890B7A4B0A953/IQDf30yn_tHVSJLVxNbAVqZHATIify3DV-vjHl3txwLzqGg?e=b1SRxo",
+      "repo": "https://github.com/wildankamri/credit-risk-scorecard",
+      "notebook": "https://github.com/wildankamri/credit-risk-scorecard/blob/main/credit-risk-analyst.ipynb",
+      "downloads": [
+        { "label": "Unduh presentasi (.pptx)", "file": "files/credit-risk-prediction-portfolio.pptx" },
+        { "label": "Unduh notebook (.ipynb)", "file": "files/credit-risk-analyst.ipynb" }
+      ],
+      "downloadNote": "Presentasi di atas bisa dibuka slide demi slide. Kode lengkap dan dokumentasi ada di repositori GitHub. Untuk menjalankan notebook, dataset perlu diunduh terpisah (link ada di README repositori).",
+      "embed": "https://1drv.ms/p/c/8C8890B7A4B0A953/IQTf30yn_tHVSJLVxNbAVqZHAcwgS7m8sXmfWj2bfHRv5jk",
+      "embedSize": { "width": 1280, "height": 780 }
+    },
+    "insights": [
+      "Fitur term menjadi kontributor prediktif terbesar (permutation importance 0,07423), diikuti annual_inc dan dti.",
+      "Dengan threshold 0,4948, model menangkap 65,63% pinjaman bad, dengan precision 30,83%.",
+      "Pembagian data kronologis dipakai agar evaluasi lebih realistis dan mengurangi kebocoran informasi antarperiode.",
+      "Feature importance menunjukkan kontribusi prediktif, bukan sebab-akibat; ketersediaan fitur saat keputusan kredit perlu diverifikasi sebelum penerapan."
+    ],
+    "date": "2026-10",
+    "featured": false
   }
 ]

@@ -444,7 +444,8 @@ body {
 }
 
 .project-back-link:focus-visible,
-.project-action:focus-visible {
+.project-action:focus-visible,
+.project-action-link:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
 }
@@ -515,6 +516,25 @@ body {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 0.75rem;
+}
+
+.project-download-note {
+  margin-top: 0.75rem;
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+
+.project-action-link {
+  align-self: center;
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-hairline);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.project-action-link:hover {
+  color: var(--color-accent-hover);
+  border-bottom-color: var(--color-accent);
 }
 
 .project-preview-viewport {
@@ -623,11 +643,17 @@ body {
 
   .project-preview-actions {
     width: 100%;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .project-preview-actions .project-action {
     width: 100%;
     text-align: center;
+  }
+
+  .project-preview-actions .project-action-link {
+    align-self: flex-start;
   }
 }
 

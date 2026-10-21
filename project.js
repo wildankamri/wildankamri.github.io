@@ -50,12 +50,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const statusText = project.status === 'completed'
       ? 'Selesai'
       : 'Sedang dikerjakan';
+    const downloads = Array.isArray(links.downloads)
+      ? links.downloads
+      : links.download
+        ? [{ label: links.downloadLabel || 'Unduh file', file: links.download }]
+        : [];
     const previewActions = [
       links.liveDashboard
         ? `<a class="btn btn-primary project-action" href="${escapeHTML(links.liveDashboard)}" target="_blank" rel="noopener noreferrer">Buka di aplikasi aslinya</a>`
         : '',
-      links.download
-        ? `<a class="btn btn-secondary project-action" href="${escapeHTML(links.download)}" download>Unduh file</a>`
+      ...downloads.map(download =>
+        `<a class="btn btn-secondary project-action" href="${escapeHTML(download.file)}" download>${escapeHTML(download.label)}</a>`
+      ),
+      links.notebook
+        ? `<a class="project-action-link" href="${escapeHTML(links.notebook)}" target="_blank" rel="noopener noreferrer">Lihat notebook di GitHub</a>`
+        : '',
+      links.repo
+        ? `<a class="project-action-link" href="${escapeHTML(links.repo)}" target="_blank" rel="noopener noreferrer">Lihat repositori GitHub</a>`
         : ''
     ].filter(Boolean).join('');
 
@@ -122,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="project-preview-actions">${previewActions}</div>
           </div>
           ${previewHTML}
+          ${links.downloadNote ? `<p class="project-download-note">${escapeHTML(links.downloadNote)}</p>` : ''}
         </section>
         <div class="project-detail-copy">
           ${contentSections}
