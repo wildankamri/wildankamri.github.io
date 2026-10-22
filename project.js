@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <section class="project-preview" aria-label="Pratinjau proyek">
           <div class="project-preview-heading">
-            ${hasEmbed ? '<span class="project-preview-label">Dashboard interaktif</span>' : ''}
+            ${hasEmbed ? '<span class="project-preview-label">Pratinjau dashboard</span>' : ''}
             <div class="project-preview-actions">${previewActions}</div>
           </div>
           ${previewHTML}

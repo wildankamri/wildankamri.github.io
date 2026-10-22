@@ -14,7 +14,7 @@
   --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
 
-  --container-max: 860px;
+  --container-max: 1280px;
   --container-padding: 2rem;
   --spacing-row: 1rem;
 }
@@ -61,9 +61,9 @@ body {
 .section-divider {
   border: none;
   border-top: 1px solid var(--color-hairline);
-  max-width: var(--container-max);
+  width: calc(100% - var(--container-padding) - var(--container-padding));
+  max-width: calc(var(--container-max) - var(--container-padding) - var(--container-padding));
   margin: 0 auto;
-  padding: 0 var(--container-padding);
 }
 
 /* ========================================
@@ -131,24 +131,35 @@ body {
   letter-spacing: 0.01em;
 }
 
+.hero-copy {
+  width: fit-content;
+  max-width: 100%;
+}
+
 .hero-headline {
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 2.75rem;
+  font-size: clamp(2.125rem, 4.2vw, 3.75rem);
   line-height: 1.18;
   color: var(--color-ink);
   margin-bottom: 1.5rem;
-  max-width: 620px;
 }
 
 .hero-sub {
+  width: 0;
+  min-width: 100%;
   font-family: var(--font-sans);
   font-size: 1.0625rem;
   font-weight: 400;
   line-height: 1.7;
   color: var(--color-muted);
-  max-width: 540px;
   margin-bottom: 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .hero-headline {
+    white-space: nowrap;
+  }
 }
 
 .hero-availability {
@@ -336,7 +347,7 @@ body {
    ======================================== */
 .ledger-header {
   display: grid;
-  grid-template-columns: 1fr 150px 140px 80px;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 240px) minmax(140px, 170px) 80px;
   gap: 1rem;
   align-items: baseline;
   padding: 0.5rem 0;
@@ -350,7 +361,7 @@ body {
 
 .ledger-row {
   display: grid;
-  grid-template-columns: 1fr 150px 140px 80px;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 240px) minmax(140px, 170px) 80px;
   gap: 1rem;
   align-items: start;
   padding: var(--spacing-row) 0;
@@ -373,8 +384,7 @@ body {
   flex-wrap: wrap;
 }
 
-.project-title-line a,
-.project-title-line span {
+.project-title-line a {
   font-family: var(--font-sans);
   font-size: 0.9375rem;
   font-weight: 500;
@@ -390,16 +400,6 @@ body {
 .project-title-line a:hover {
   border-bottom-color: var(--color-accent);
   color: var(--color-accent);
-}
-
-.featured-label {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  font-weight: 400;
-  color: var(--color-accent);
-  background-color: rgba(42, 75, 124, 0.08);
-  padding: 0.125rem 0.5rem;
-  letter-spacing: 0.01em;
 }
 
 .project-summary {
@@ -611,7 +611,6 @@ body {
 }
 
 .project-detail-summary {
-  max-width: 65ch;
   margin-bottom: 2rem;
   color: var(--color-muted);
   font-size: 1.0625rem;
@@ -716,8 +715,8 @@ body {
 
 .project-detail-section {
   display: grid;
-  grid-template-columns: 200px minmax(0, 1fr);
-  column-gap: 2rem;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 0.625rem;
   align-items: start;
   padding: var(--spacing-row) 0;
   border-top: 1px solid var(--color-hairline);
@@ -732,7 +731,7 @@ body {
 
 .project-detail-section p,
 .project-detail-insights {
-  max-width: 70ch;
+  width: 100%;
   color: var(--color-muted);
 }
 
@@ -793,10 +792,6 @@ body {
     padding: 5rem 0 3.5rem;
   }
 
-  .hero-headline {
-    font-size: 2.125rem;
-  }
-
   .ledger-header {
     grid-template-columns: 1fr 120px 120px 72px;
     gap: 0.75rem;
@@ -844,6 +839,7 @@ body {
   .hero-headline {
     font-size: 1.75rem;
     line-height: 1.25;
+    white-space: normal;
   }
 
   .project-detail {

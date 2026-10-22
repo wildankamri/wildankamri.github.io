@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
         '<p class="load-error">Gagal memuat data proyek. Pastikan file dibuka melalui server lokal, bukan langsung dari file:// .</p>';
     });
 
-  // ── Sort: featured first, then newest date ──────────────
+  // ── Sort: newest date, then title ───────────────────────
   function sortProjects(projects) {
     return [...projects].sort((a, b) => {
-      if (a.featured !== b.featured) return b.featured ? 1 : -1;
-      return b.date.localeCompare(a.date);
+      return b.date.localeCompare(a.date)
+        || a.title.localeCompare(b.title, 'id', { sensitivity: 'base' });
     });
   }
 
@@ -39,10 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function createRow(project) {
     const titleHTML = `<a href="project.html?id=${encodeURIComponent(project.id)}" class="project-link">${escapeHTML(project.title)}</a>`;
-
-    const featuredHTML = project.featured
-      ? '<span class="featured-label">Unggulan</span>'
-      : '';
 
     const toolsHTML = project.tools
       .map(t => `<span class="tool-badge">${escapeHTML(t)}</span>`)
@@ -63,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="ledger-col-name">
           <div class="project-title-line">
             ${titleHTML}
-            ${featuredHTML}
           </div>
           <p class="project-summary">${escapeHTML(project.summary)}</p>
         </div>
