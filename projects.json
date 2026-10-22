@@ -26,7 +26,7 @@
       "Pembayaran kartu kredit mendominasi dengan 76,8% transaksi.",
       "Zona penjemputan teratas: Upper East Side North, Midtown Center, dan JFK Airport."
     ],
-    "date": "2026-10",
+    "date": "2026-09",
     "featured": true
   },
   {
@@ -53,7 +53,7 @@
       "Jakarta menjadi kota dengan penjualan tertinggi, sebanyak 1.751 produk.",
       "Segmen Apotek menyumbang 63,6% penjualan, sementara Ampicillin terjual 1.337 unit."
     ],
-    "date": "2026-10",
+    "date": "2026-09",
     "featured": false
   },
     {
@@ -82,6 +82,39 @@
       "Robots (42%) dan Drones (27%) menyumbang 70% dari total revenue.",
       "California dan Texas menyumbang 25% revenue.",
       "Pelanggan repeat menghasilkan 80% revenue, padahal hanya 59% dari pelanggan aktif."
+    ],
+    "date": "2026-09",
+    "featured": false
+  },
+    {
+    "id": "kerinci-utama-dashboard",
+    "title": "Kerinci Utama: Executive Sales Dashboard",
+    "category": "dashboard",
+    "tools": ["Power BI"],
+    "status": "completed",
+    "summary": "Dashboard eksekutif 8 halaman untuk penjualan material periode 2017 sampai Maret 2020: ringkasan, peta, kinerja, target, segmentasi, cohort, forecast, dan skenario what-if.",
+    "problem": "Memberi manajemen satu tempat untuk memantau penjualan, mencari penyebab selisih terhadap target, memahami perilaku pelanggan, dan menguji skenario untuk mengejar target 2020.",
+    "process": "Membangun dashboard Power BI delapan halaman dengan navigasi antar halaman dan filter tahun: Overview, Map (sebaran provinsi dan kota), Performance Explorer, Target & Variance (jembatan revenue dan analisis penyebab perubahan), Customer Segmentation (recency, frequency, monetary), Cohort Analysis, Forecast (baseline rata-rata 12 bulan dengan uji mundur), serta What-If dengan parameter skenario dan rekomendasi per segmen.",
+    "result": "Pada 2019, revenue Rp4,89 miliar mencapai 121,19% dari target Rp4,04 miliar. Kenaikan dari 2018 didorong harga (+Rp889 juta), sedangkan volume (−Rp252 juta) dan mix (−Rp215 juta) menekan. Proyeksi 2020 sebesar Rp4,03 miliar, atau 71,01% dari target Rp5,67 miliar.",
+    "thumbnail": "images/kerinci-utama-dashboard.png",
+    "links": {
+      "caseStudy": null,
+      "liveDashboard": "https://1drv.ms/p/c/8C8890B7A4B0A953/IQCfzeF9VyZwTIz_FaOYQ-jjAa1d1TxSocgz6StlpSHOfPg?e=glOsf4",
+      "repo": null,
+      "downloads": [
+        { "label": "Unduh presentasi (.pptx)", "file": "files/kerinci-utama-dashboard.pptx" },
+        { "label": "Unduh file Power BI (.pbix)", "file": "files/kerinci-utama-dashboard.pbix" }
+      ],
+      "downloadNote": "Data pada proyek ini adalah data dummy. Presentasi di atas berisi tangkapan layar tiap halaman, jadi filter dan tombol tidak bisa diklik di sini. Untuk mencoba interaksinya, unduh file .pbix dan buka di Power BI Desktop.",
+      "embed": "https://1drv.ms/p/c/8C8890B7A4B0A953/IQSfzeF9VyZwTIz_FaOYQ-jjAUi9-8D6hTIePSizTmoHXRI",
+      "embedSize": { "width": 1280, "height": 780 }
+    },
+    "insights": [
+      "Kenaikan revenue 2019 sebesar 9,47% datang dari harga (+Rp889 juta); volume dan mix justru turun.",
+      "Segmen Champions hanya 12,79% dari pelanggan tetapi menyumbang 63,69% revenue, sedangkan Lost (38,42% pelanggan) hanya 1,19%.",
+      "Retensi tahun pertama turun dari 44,73% (cohort 2017) ke 21,11% (cohort 2018) dan 5,92% (cohort 2019); cohort 2017 menyumbang sekitar 80% revenue.",
+      "Proyeksi 2020 baru mencapai 71,01% target, dan butuh Rp533,23 juta per bulan, 46,59% di atas baseline.",
+      "Region West menyumbang 77,68% revenue, dan Jawa Timur menjadi provinsi terbesar (10,42%)."
     ],
     "date": "2026-10",
     "featured": false
