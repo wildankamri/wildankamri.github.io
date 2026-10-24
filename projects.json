@@ -15,6 +15,7 @@
       "liveDashboard": "https://public.tableau.com/app/profile/wildan.khoirul.amri/viz/porto_17909272814760/Dashboard1",
       "repo": null,
       "download": null,
+      "previewLabel": "Pratinjau dashboard",
       "embed": "https://public.tableau.com/views/porto_17909272814760/Dashboard1?:showVizHome=no&:embed=true",
       "embedSize": {
         "width": 1400,
@@ -45,6 +46,7 @@
       "liveDashboard": "https://datastudio.google.com/reporting/2995e9b5-17c7-406d-a846-38ad2a25a73d/page/q4n9F",
       "repo": null,
       "download": null,
+      "previewLabel": "Pratinjau dashboard",
       "embed": "https://lookerstudio.google.com/embed/reporting/2995e9b5-17c7-406d-a846-38ad2a25a73d/page/q4n9F",
       "embedSize": null
     },
@@ -74,6 +76,7 @@
       "download": "files/PT-Sejahtera-Bersama-Sales-Dashboard.xlsx",
       "downloadLabel": "Unduh file Excel (.xlsx)",
       "downloadNote": "Tampilan di atas adalah versi web: slicer Tahun dan Kategori tidak berfungsi di Excel untuk web. Unduh file dan buka di Excel desktop agar slicer berjalan.",
+      "previewLabel": "Pratinjau dashboard",
       "embed": "https://1drv.ms/x/c/8C8890B7A4B0A953/IQSua5AoHDpGSrsSoYZ3rXziATAWDIth94BfUKN9fEhiFTo?em=2&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True",
       "embedSize": { "width": 1370, "height": 850 }
     },
@@ -94,8 +97,8 @@
     "status": "completed",
     "summary": "Dashboard eksekutif 8 halaman untuk penjualan material periode 2017 sampai Maret 2020: ringkasan, peta, kinerja, target, segmentasi, cohort, forecast, dan skenario what-if.",
     "problem": "Memberi manajemen satu tempat untuk memantau penjualan, mencari penyebab selisih terhadap target, memahami perilaku pelanggan, dan menguji skenario untuk mengejar target 2020.",
-    "process": "Membangun dashboard Power BI delapan halaman dengan navigasi antar halaman dan filter tahun: Overview, Map (sebaran provinsi dan kota), Performance Explorer, Target & Variance (jembatan revenue dan analisis penyebab perubahan), Customer Segmentation (recency, frequency, monetary), Cohort Analysis, Forecast (baseline rata-rata 12 bulan dengan uji mundur), serta What-If dengan parameter skenario dan rekomendasi per segmen.",
-    "result": "Pada 2019, revenue Rp4,89 miliar mencapai 121,19% dari target Rp4,04 miliar. Kenaikan dari 2018 didorong harga (+Rp889 juta), sedangkan volume (−Rp252 juta) dan mix (−Rp215 juta) menekan. Proyeksi 2020 sebesar Rp4,03 miliar, atau 71,01% dari target Rp5,67 miliar.",
+    "process": "Mengolah dan memvalidasi data, membangun model bintang serta measure DAX, dan membuat peta interaktif menggunakan polygon provinsi dan 514 kota/kabupaten. Analisis mencakup segmentasi customer berbasis RFM, cohort retention, dekomposisi perubahan revenue menggunakan harga-volume-mix, serta perbandingan metode forecast melalui backtesting 12 bulan. Dashboard dilengkapi navigasi, filter, parameter, bookmark, dan simulasi what-if.",
+    "result": "Membangun dashboard Power BI dengan 8 halaman: Executive Overview, Map, Performance Explorer, Target and Variance, Customer Segmentation, Cohort Analysis, Forecast, serta What-If and Recommendation. Dashboard menyediakan analisis performa penjualan, peta geografis interaktif, evaluasi target, retensi customer, proyeksi revenue, dan simulasi strategi untuk mendukung keputusan business operation.",
     "thumbnail": "images/kerinci-utama-dashboard.png",
     "links": {
       "caseStudy": null,
@@ -106,15 +109,18 @@
         { "label": "Unduh file Power BI (.pbix)", "file": "files/kerinci-utama-dashboard.pbix" }
       ],
       "downloadNote": "Data pada proyek ini adalah data dummy. Presentasi di atas berisi tangkapan layar tiap halaman, jadi filter dan tombol tidak bisa diklik di sini. Untuk mencoba interaksinya, unduh file .pbix dan buka di Power BI Desktop.",
+      "previewLabel": "Pratinjau presentasi",
       "embed": "https://1drv.ms/p/c/8C8890B7A4B0A953/IQSfzeF9VyZwTIz_FaOYQ-jjAUi9-8D6hTIePSizTmoHXRI",
       "embedSize": { "width": 1280, "height": 780 }
     },
     "insights": [
-      "Kenaikan revenue 2019 sebesar 9,47% datang dari harga (+Rp889 juta); volume dan mix justru turun.",
-      "Segmen Champions hanya 12,79% dari pelanggan tetapi menyumbang 63,69% revenue, sedangkan Lost (38,42% pelanggan) hanya 1,19%.",
-      "Retensi tahun pertama turun dari 44,73% (cohort 2017) ke 21,11% (cohort 2018) dan 5,92% (cohort 2019); cohort 2017 menyumbang sekitar 80% revenue.",
-      "Proyeksi 2020 baru mencapai 71,01% target, dan butuh Rp533,23 juta per bulan, 46,59% di atas baseline.",
-      "Region West menyumbang 77,68% revenue, dan Jawa Timur menjadi provinsi terbesar (10,42%)."
+      "Pertumbuhan revenue: revenue naik 9,5%, dari Rp4,47 miliar (2018) menjadi Rp4,89 miliar (2019), dengan margin sekitar 74,9%.",
+      "Konsentrasi produk: p-203 dan baja hitam menyumbang sekitar 91% revenue.",
+      "Penyebab pertumbuhan: kenaikan revenue 2019 terutama didorong harga (+Rp889 juta), sementara volume (−Rp252 juta) dan bauran produk (−Rp215 juta) menekan pertumbuhan.",
+      "Peluang customer: 178 customer At Risk menyumbang Rp2,0 miliar atau 14,6% revenue, sehingga menjadi peluang reaktivasi.",
+      "Retensi dan akuisisi: retensi tahun pertama turun dari 44,7% pada cohort 2017 menjadi 21,1% pada cohort 2018. Jumlah customer baru juga menurun dari 588 menjadi 338.",
+      "Risiko target 2020: forecast sebesar Rp4,03 miliar hanya mencapai 71% dari target Rp5,67 miliar. Untuk mengejar target, kebutuhan revenue mencapai Rp533 juta per bulan, atau 46,6% di atas baseline.",
+      "Rekomendasi: target perlu dievaluasi dan strategi harga, volume, reaktivasi customer, serta akuisisi pelanggan perlu dijalankan secara terpadu."
     ],
     "date": "2026-10",
     "featured": false
@@ -140,6 +146,7 @@
         { "label": "Unduh notebook (.ipynb)", "file": "files/credit-risk-analyst.ipynb" }
       ],
       "downloadNote": "Presentasi di atas bisa dibuka slide demi slide. Kode lengkap dan dokumentasi ada di repositori GitHub. Untuk menjalankan notebook, dataset perlu diunduh terpisah (link ada di README repositori).",
+      "previewLabel": "Pratinjau presentasi",
       "embed": "https://1drv.ms/p/c/8C8890B7A4B0A953/IQTf30yn_tHVSJLVxNbAVqZHAcwgS7m8sXmfWj2bfHRv5jk",
       "embedSize": { "width": 1280, "height": 780 }
     },
@@ -148,6 +155,39 @@
       "Dengan threshold 0,4948, model menangkap 65,63% pinjaman bad, dengan precision 30,83%.",
       "Pembagian data kronologis dipakai agar evaluasi lebih realistis dan mengurangi kebocoran informasi antarperiode.",
       "Feature importance menunjukkan kontribusi prediktif, bukan sebab-akibat; ketersediaan fitur saat keputusan kredit perlu diverifikasi sebelum penerapan."
+    ],
+    "date": "2026-10",
+    "featured": false
+  },
+  {
+    "id": "sql-business-analysis-olist",
+    "title": "SQL Business Analysis: Olist E-commerce",
+    "category": "sql-analysis",
+    "tools": ["PostgreSQL", "SQL"],
+    "status": "completed",
+    "summary": "Analisis SQL terhadap data e-commerce Olist Brasil periode 2016–2018 untuk mengevaluasi kualitas data, tren revenue produk, kontribusi kategori, pembelian berulang, dan ketepatan pengiriman. Proyek ini menggunakan PostgreSQL untuk mengolah data transaksi, memvalidasi metrik, dan menghasilkan insight bisnis yang disajikan dalam presentasi analisis.",
+    "problem": "Proyek ini menjawab empat pertanyaan bisnis utama: bagaimana tren revenue produk dari waktu ke waktu, kategori produk mana yang menghasilkan revenue terbesar, seberapa besar proporsi pelanggan yang melakukan pembelian berulang, dan seberapa baik pesanan delivered tiba sesuai estimasi pengiriman.",
+    "process": "Analisis dilakukan terhadap sembilan tabel sumber menggunakan PostgreSQL. Proses mencakup penggabungan tabel dengan JOIN, penyusunan query menggunakan CTE, agregasi metrik, analisis perubahan bulanan menggunakan window functions, serta validasi kualitas data. Hasil perhitungan kemudian direkonsiliasi terhadap baseline untuk memeriksa konsistensi total pesanan, item, dan revenue produk. Contoh query dan hasil analisis ditampilkan dalam presentasi proyek.",
+    "result": "Revenue produk pada pesanan berstatus delivered mencapai R$13,22 juta selama September 2016–Agustus 2018. Tren bulanan meningkat sepanjang 2017 hingga awal 2018, kemudian berfluktuasi. Kategori health_beauty mencatat revenue tertinggi, sekitar R$1,23 juta. Repeat-buyer rate tercatat sebesar 3,00% (2.801 dari 93.350 pelanggan unik), sedangkan 91,89% dari 96.470 pesanan eligible tiba sesuai atau sebelum estimasi pengiriman.",
+    "thumbnail": "images/sql-business-analysis.png",
+    "links": {
+      "caseStudy": null,
+      "liveDashboard": "https://1drv.ms/p/c/8C8890B7A4B0A953/IQA9D8SLvEJAQKIPl5nk2rnHAdU3AOK0W5fRkBB7d8xczM8?e=y8OQmC",
+      "repo": null,
+      "downloads": [
+        { "label": "Unduh presentasi (.pptx)", "file": "files/sql-business-analysis-olist.pptx" }
+      ],
+      "downloadNote": "Presentasi terdiri dari 18 slide yang membahas proses analisis SQL, validasi data, perhitungan KPI, dan temuan bisnis. Gunakan kontrol navigasi atau mode layar penuh untuk membaca isi slide dengan lebih jelas. Presentasi menampilkan contoh query, hasil analisis, dan interpretasi metrik. Sumber dataset yang dipakai yaitu Olist Brazilian E-Commerce di Kaggle yang linknya tercantum di slide 3.",
+      "previewLabel": "Pratinjau presentasi",
+      "embed": "https://1drv.ms/p/c/8C8890B7A4B0A953/IQQ9D8SLvEJAQKIPl5nk2rnHARJ--_HkwVm8ENUzMZlqbVs",
+      "embedSize": { "width": 1280, "height": 780 }
+    },
+    "insights": [
+      "Rekonsiliasi revenue: Total revenue kategori sesuai dengan baseline, dengan selisih R$0,00. Namun, R$170.726,63 berasal dari item tanpa kategori produk yang perlu ditinjau lebih lanjut.",
+      "Pembelian berulang: Repeat-buyer rate sebesar 3,00%, yaitu 2.801 dari 93.350 pelanggan unik dengan dua atau lebih pesanan delivered dalam cakupan analisis.",
+      "Ketepatan pengiriman: Sebanyak 91,89% pesanan eligible tiba sesuai atau sebelum estimasi. Tingkat keterlambatan bervariasi dari 2,88% di Rondônia hingga 23,93% di Alagoas, pada state dengan minimal 100 pesanan eligible.",
+      "Revenue per state: São Paulo mencatat revenue produk terbesar sebesar R$5,07 juta, diikuti Rio de Janeiro sebesar R$1,76 juta dan Minas Gerais sebesar R$1,55 juta.",
+      "Batasan analisis: Temuan bersifat deskriptif dan menjadi dasar untuk analisis lanjutan, bukan bukti hubungan sebab-akibat."
     ],
     "date": "2026-10",
     "featured": false

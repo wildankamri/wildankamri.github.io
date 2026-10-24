@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   const projectList = document.getElementById('project-list');
-  const filterButtons = document.querySelectorAll('.filter-btn');
+  const filterNav = document.getElementById('project-filters');
+  const categoryLabels = {
+    dashboard: 'Dashboard',
+    'sql-analysis': 'SQL Analysis',
+    'data-cleaning': 'Data Cleaning',
+    'machine-learning': 'Machine Learning'
+  };
+  let filterButtons = [];
   let allProjects = [];
 
   // ── Fetch & render ──────────────────────────────────────
@@ -11,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(projects => {
       allProjects = sortProjects(projects);
+      renderFilters(allProjects);
       renderProjects(allProjects);
     })
     .catch(() => {
@@ -24,6 +32,40 @@ document.addEventListener('DOMContentLoaded', () => {
       return b.date.localeCompare(a.date)
         || a.title.localeCompare(b.title, 'id', { sensitivity: 'base' });
     });
+  }
+
+  function renderFilters(projects) {
+    const availableCategories = new Set(projects.map(project => project.category));
+    const filters = [
+      ['all', 'Semua'],
+      ...Object.entries(categoryLabels).filter(([category]) =>
+        availableCategories.has(category)
+      )
+    ];
+
+    filterNav.replaceChildren(...filters.map(([category, label], index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = `filter-btn${index === 0 ? ' active' : ''}`;
+      button.dataset.category = category;
+      button.setAttribute('aria-pressed', index === 0 ? 'true' : 'false');
+      button.textContent = label;
+      button.addEventListener('click', () => {
+        filterButtons.forEach(filterButton => {
+          filterButton.classList.remove('active');
+          filterButton.setAttribute('aria-pressed', 'false');
+        });
+        button.classList.add('active');
+        button.setAttribute('aria-pressed', 'true');
+
+        const filtered = category === 'all'
+          ? allProjects
+          : allProjects.filter(project => project.category === category);
+        renderProjects(filtered);
+      });
+      return button;
+    }));
+    filterButtons = [...filterNav.querySelectorAll('.filter-btn')];
   }
 
   // ── Render ledger rows ──────────────────────────────────
@@ -86,23 +128,4 @@ document.addEventListener('DOMContentLoaded', () => {
     el.textContent = str;
     return el.innerHTML;
   }
-
-  // ── Tab filter ──────────────────────────────────────────
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-pressed', 'false');
-      });
-      btn.classList.add('active');
-      btn.setAttribute('aria-pressed', 'true');
-
-      const category = btn.dataset.category;
-      const filtered = category === 'all'
-        ? allProjects
-        : allProjects.filter(p => p.category === category);
-
-      renderProjects(filtered);
-    });
-  });
 });

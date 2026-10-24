@@ -44,6 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function createProjectPage(project) {
     const title = escapeHTML(project.title);
     const links = project.links || {};
+    const previewLabel = typeof links.previewLabel === 'string' && links.previewLabel.trim()
+      ? links.previewLabel.trim()
+      : 'Pratinjau';
     const toolsHTML = (project.tools || [])
       .map(tool => `<span class="tool-badge">${escapeHTML(tool)}</span>`)
       .join('');
@@ -129,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <section class="project-preview" aria-label="Pratinjau proyek">
           <div class="project-preview-heading">
-            ${hasEmbed ? '<span class="project-preview-label">Pratinjau dashboard</span>' : ''}
+            ${hasEmbed ? `<span class="project-preview-label">${escapeHTML(previewLabel)}</span>` : ''}
             <div class="project-preview-actions">${previewActions}</div>
           </div>
           ${previewHTML}
