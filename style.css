@@ -735,8 +735,31 @@ body {
   color: var(--color-muted);
 }
 
+.project-detail-section-content {
+  min-width: 0;
+}
+
+.project-result-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.375rem 1rem;
+  margin-top: 0.75rem;
+  color: var(--color-muted);
+}
+
+.project-result-links > span {
+  color: var(--color-muted);
+}
+
 .project-detail-insights {
   padding-left: 1.25rem;
+}
+
+.project-detail-insights strong {
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 600;
 }
 
 .project-detail-insights li + li {

@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
           : ''}`
       : '<p class="project-preview-empty">Pratinjau belum tersedia</p>';
 
+    const resultLinksHTML = createResultLinks(project.resultLinks);
     const contentSections = [
       ['Masalah', project.problem],
       ['Proses', project.process],
@@ -102,16 +103,33 @@ document.addEventListener('DOMContentLoaded', () => {
       .map(([heading, text]) => `
         <section class="project-detail-section">
           <h2>${heading}</h2>
-          <p>${escapeHTML(text)}</p>
+          ${heading === 'Hasil' && resultLinksHTML
+            ? `<div class="project-detail-section-content"><p>${escapeHTML(text)}</p>${resultLinksHTML}</div>`
+            : `<p>${escapeHTML(text)}</p>`}
         </section>`)
       .join('');
+
+    function createResultLinks(resultLinks) {
+      if (!Array.isArray(resultLinks) || resultLinks.length === 0) return '';
+
+      const linksHTML = resultLinks
+        .filter(link => link && typeof link.label === 'string' && typeof link.url === 'string')
+        .map(link =>
+          `<a class="project-action-link" href="${escapeHTML(link.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(link.label)}</a>`
+        )
+        .join('');
+
+      return linksHTML
+        ? `<div class="project-result-links"><span>File proyek:</span>${linksHTML}</div>`
+        : '';
+    }
 
     const insightsHTML = Array.isArray(project.insights) && project.insights.length
       ? `
         <section class="project-detail-section">
           <h2>Insight</h2>
           <ul class="project-detail-insights">
-            ${project.insights.map(insight => `<li>${escapeHTML(insight)}</li>`).join('')}
+            ${project.insights.map(createInsight).filter(Boolean).map(insight => `<li>${insight}</li>`).join('')}
           </ul>
         </section>`
       : '';
@@ -143,6 +161,17 @@ document.addEventListener('DOMContentLoaded', () => {
           ${insightsHTML}
         </div>
       </article>`;
+  }
+
+  function createInsight(insight) {
+    if (typeof insight === 'string') return escapeHTML(insight);
+    if (!insight || typeof insight !== 'object'
+      || typeof insight.label !== 'string'
+      || typeof insight.text !== 'string') {
+      return '';
+    }
+
+    return `<strong>${escapeHTML(insight.label)}</strong>: ${escapeHTML(insight.text)}`;
   }
 
   function configureScaledEmbed() {

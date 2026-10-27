@@ -191,5 +191,41 @@
     ],
     "date": "2026-10",
     "featured": false
+  },
+  {
+    "id": "data-cleaning-kependudukan-jabar",
+    "title": "Data Cleaning: Kependudukan Jawa Barat",
+    "category": "data-cleaning",
+    "tools": ["Google Sheets"],
+    "status": "completed",
+    "summary": "Mengubah tabel kependudukan dari publikasi BPS Provinsi Jawa Barat (PDF) menjadi dataset terstruktur, terstandar, dan dapat ditelusuri ke sumbernya.",
+    "problem": "Data jumlah penduduk berdasarkan jenis kelamin dan luas wilayah Jawa Barat tersedia dalam tabel PDF publikasi Provinsi Jawa Barat Dalam Angka dari BPS. Namun, struktur tabel tersebut belum siap digunakan untuk analisis karena data yang disalin ke Google Sheets dapat masuk ke satu kolom, nama wilayah seperti Bandung Barat dapat terpecah saat menggunakan delimiter spasi, dan format angka perlu diseragamkan. Data dari beberapa edisi publikasi juga perlu disatukan dengan struktur kolom dan identitas wilayah yang konsisten agar dapat digunakan untuk analisis lintas wilayah dan tahun.",
+    "process": "Pengolahan dilakukan menggunakan Google Sheets, dimulai dengan mengambil data dari publikasi BPS edisi 2022–2026 dan menyimpannya dalam spreadsheet RAW. Referensi sumber dicatat pada sheet Source Data, meliputi judul publikasi, tautan, dan halaman PDF. Data kemudian dibersihkan dengan memisahkan nama wilayah dan nilai numerik, memeriksa hasil pemisahan nama wilayah, menyeragamkan format angka, serta menambahkan kode provinsi dan kabupaten/kota berdasarkan referensi BPS. Selanjutnya, data diubah dari format melebar (wide format) menjadi format memanjang (long format) melalui proses transpose, lalu disusun ke dalam skema GOLD dengan nama kolom huruf kecil, tanpa spasi, dan menggunakan underscore (_) sebagai pemisah kata. Pemeriksaan kualitas dilakukan untuk mengevaluasi duplikasi, nilai kosong, kelengkapan wilayah dan tahun, serta konsistensi struktur data.",
+    "result": "Dataset GOLD menghasilkan 486 baris data yang mencakup 27 kabupaten/kota di Jawa Barat selama periode 2021–2026, dengan dua kelompok data utama: jumlah penduduk berdasarkan jenis kelamin dan luas wilayah. Dataset telah memiliki struktur kolom yang konsisten, identitas wilayah beserta kodenya, informasi tahun, kategori, subkategori, nilai, dan referensi sumber. Berdasarkan pemeriksaan yang dilakukan, tidak ditemukan duplikasi maupun nilai kosong, dan cakupan wilayah serta tahun dinyatakan lengkap sesuai pemeriksaan tersebut. Nilai luas wilayah disimpan pada setiap tahun untuk menjaga konsistensi struktur dataset. Tahun 2020 termasuk dalam target awal, tetapi belum dimasukkan ke GOLD final.",
+    "resultLinks": [
+      { "label": "RAW (Source Data & Extraction)", "url": "https://docs.google.com/spreadsheets/d/1Fg4R4sDvBp4205hZxKDfwmOoYl0blivqPSWMtHC9srg/edit?gid=0#gid=0" },
+      { "label": "GOLD (Cleaned & Standardized Dataset)", "url": "https://docs.google.com/spreadsheets/d/1GUM80oriq8OnbJdt9sT5WHOGPiexogOo5mvXjb-ZgPc/edit?gid=0#gid=0" }
+    ],
+    "thumbnail": "images/data-cleaning-kependudukan-jabar.png",
+    "links": {
+      "caseStudy": null,
+      "liveDashboard": "https://1drv.ms/p/c/8C8890B7A4B0A953/IQCH6o2sEuzBRosn15_eH8L5ATiERapbAg-S52JxgYf_GYY?e=b2jMHQ",
+      "repo": null,
+      "downloads": [
+        { "label": "Unduh presentasi (.pptx)", "file": "files/data-cleaning-kependudukan-jawa-barat.pptx" }
+      ],
+      "downloadNote": "Dataset hasil cleaning dan sheet sumbernya dapat dibuka dari tautan di dalam slide. Sumber data: publikasi Provinsi Jawa Barat Dalam Angka (BPS).",
+      "previewLabel": "Pratinjau presentasi",
+      "embed": "https://1drv.ms/p/c/8C8890B7A4B0A953/IQSH6o2sEuzBRosn15_eH8L5Ae8ZErNUdxzd33_O7N3kONk",
+      "embedSize": { "width": 1280, "height": 780 }
+    },
+    "insights": [
+      { "label": "Standardisasi data", "text": "Data yang berasal dari beberapa publikasi perlu memiliki format angka, identitas wilayah, dan struktur kolom yang konsisten agar dapat digabungkan dan dibandingkan." },
+      { "label": "Keterlacakan sumber", "text": "Pencatatan tautan publikasi dan halaman PDF pada setiap data membantu proses verifikasi serta memudahkan penelusuran kembali ke sumber aslinya." },
+      { "label": "Potensi analisis", "text": "Data jumlah penduduk berdasarkan jenis kelamin dan luas wilayah dapat menjadi dasar untuk menghitung total penduduk, kepadatan penduduk, distribusi penduduk, dan laju pertumbuhan penduduk." },
+      { "label": "Pengembangan berikutnya", "text": "Validasi silang terhadap publikasi BPS, penyusunan data dictionary, perhitungan indikator turunan, dan pembuatan visualisasi tren dapat dilakukan pada tahap selanjutnya. Indikator turunan tersebut belum dihitung dalam proyek ini." }
+    ],
+    "date": "2026-10",
+    "featured": false
   }
 ]
